@@ -1,0 +1,39 @@
+
+// закруглить углы
+@mixin round($angle: 10px) {
+  border-radius: $angle;
+}
+
+// создать триугольник с напрвлением  и цветом
+@mixin triangle($direction: up, $color: gray) {
+  &:after {
+    content: '';
+    position: absolute;
+    border: 10px solid transparent;
+    @if $direction == up {
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 20px solid $color;
+    }
+    @if $direction == down {
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top: 20px solid $color;
+    }
+    @if $direction == left {
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-right: 20px solid $color;
+    }
+    @if $direction == right {
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left: 20px solid $color;
+    }
+  }
+}
+

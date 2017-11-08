@@ -1,0 +1,14 @@
+// пороцент от числа
+@function getPart($number, $procent) {
+  @return $number * $procent / 100
+}
+
+// затемнение цвета на 20%
+@function getDarken($color) {
+  @return darken($color, 20%)
+}
+
+// генерация классов для 10 блоков
+@for $i from 1 through 10 {
+  .item#{$i} {width: 10% * $i; background: rgb(30-$i,20+$i,10*$i)}
+}

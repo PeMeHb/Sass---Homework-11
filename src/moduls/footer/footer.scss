@@ -1,0 +1,12 @@
+$fontSize: 16px;
+@import "../variables";
+
+.footer {
+    background-color: #00ff00;
+    a {
+        font-size: $fontSize - 2;
+    }
+}
+p {
+    color: #0000ff;
+}

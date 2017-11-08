@@ -1,0 +1,22 @@
+@import "../variables";
+@import "../functions.scss";
+@import "../mixins";
+
+.main {
+    background-color: #feeeee;
+    margin-bottom: 50px;
+}
+.title {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid grey;
+    line-height: getPart(50, 7);
+    @include round;
+    @include triangle(right, red)
+}
+.date {
+    font-size: 18px;
+    color: getDarken(#cccccc);
+}
+
