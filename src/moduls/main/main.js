@@ -9,7 +9,7 @@ module.exports = () => {
     }
     const content = `
     <h1 class="title">Hello</h1>
-    <h5 class="date">${getDate()}
+    <h5 class="date">${getDate()}</h5>
     <ul>${items}</ul>
 `;
     return builder('main', content , 'main');
